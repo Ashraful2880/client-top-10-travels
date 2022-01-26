@@ -11,6 +11,7 @@ import Home from './Pages/Home/Home/Home';
 import Contact from './Pages/Contact/Contact';
 import Signin from './Pages/Signin/Signin';
 import Register from './Pages/Register/Register';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/register" element={<Register />} />
