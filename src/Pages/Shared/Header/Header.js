@@ -50,6 +50,12 @@ const Header = () => {
                        <Link to="/home">
                         <img className="h-8 w-8 rounded-full ring-2 ring-offset-2 " src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Profile-Pic"/>
                        </Link>                        
+                       <Link to="/signin">
+                            <i class="fas fa-sign-in-alt text-white ml-4 text-lg px-2 py-1 border border-gray-800 rounded-lg hover:border-yellow-500"></i>
+                       </Link>                        
+                       {/* <Link to="/home">
+                            <i class="fas fa-sign-out-alt text-white ml-4 text-lg px-2 border border-gray-800 rounded-lg hover:border-yellow-500"></i>
+                       </Link>  */}                       
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import Home from './Pages/Home/Home/Home';
 import Contact from './Pages/Contact/Contact';
+import Signin from './Pages/Signin/Signin';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/signin" element={<Signin />} />
             
             {/* <Route path="/blogs" element={<PrivateRoute><Blogs></Blogs></PrivateRoute>} /> */}
             {/* <Route path="jobDetails/:productId" element={<PrivateRoute> <JobDetails/> </PrivateRoute>}/> */}
