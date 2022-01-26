@@ -12,14 +12,8 @@ const Register = () => {
                 </div>
                 <div className="bg-white shadow-lg rounded xl:w-1/3 lg:w-5/12 md:w-1/2 w-full lg:px-10 sm:px-6 sm:py-10 px-2 py-6">
                     <p className="focus:outline-none text-2xl font-extrabold leading-6 text-gray-800">Register Your Account</p>
-                    <p className="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500">Allready have account? 
-                        <Link 
-                            to="/signin" 
-                            className="ml-2 text-red-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none cursor-pointer">
-                            Log in here
-                        </Link>
-                    </p>
-                    <button className="focus:outline-none focus:ring-2 focus:ring-indigo-700 p-3 border rounded-lg border-gray-400 flex items-center w-full mt-10 hover:bg-gray-100">
+                    <img className="w-16 mx-auto mt-5" src={logo2} alt="logo"/>
+                    <button className="focus:outline-none focus:ring-2 focus:ring-indigo-700 p-3 border rounded-lg border-gray-400 flex items-center w-full mt-6 hover:bg-gray-100">
                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg2.svg" alt="google"/>
                         <p className="text-base font-medium ml-4 text-gray-700">
                             Continue with Google
@@ -64,6 +58,13 @@ const Register = () => {
                             <button type="submit" className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded-xl hover:bg-indigo-600 py-4 w-full">Create My Account</button>
                         </div>
                     </form>
+                    <p className="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500">Allready have account? 
+                        <Link 
+                            to="/signin" 
+                            className="ml-2 text-red-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none cursor-pointer">
+                            Log in here
+                        </Link>
+                    </p>
                 </div>
                 <div className="xl:w-1/3 md:w-1/2 lg:ml-16 ml-8 md:mt-0 mt-6">
                     <div className="pl-8 md:block hidden">
