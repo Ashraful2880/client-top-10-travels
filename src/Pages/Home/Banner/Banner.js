@@ -23,8 +23,8 @@ const Banner = () => {
             className="mySwiper">
             <SwiperSlide>
                 <img className="h-fit w-full" src="https://i.ibb.co/NtMj6wP/banner1.png" alt="SliderImage"/>
-                <div className="slider-text text-left">
-                    <h1 className="text-white uppercase font-bold">Book Your Destination <br /> For Tours</h1>
+                <div className="slider-text text-left absolute top-1/4 left-1/4">
+                    <h1 className="text-5xl mb-8 text-white uppercase font-bold leading-normal">Book Your Destination <br /> For Tours</h1>
                     <h2 className="mb-8 text-white text-2xl">With Top 10 Travels</h2>
                     <Link to="/blog">
                         <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg">View Blog</button>
@@ -33,8 +33,8 @@ const Banner = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <img className="w-full h-fit" src="https://i.ibb.co/ZHMN4nH/banner2.png" alt="SliderImage"/>
-                <div className="slider-text text-left">
-                    <h1 className="text-white uppercase font-bold">Travel & Explore The World <br /> For Mental Freshness</h1>
+                <div className="slider-text text-left absolute top-1/4 left-1/4 ">
+                    <h1 className="text-5xl mb-8 text-white uppercase font-bold leading-normal">Travel & Explore The World <br /> For Mental Freshness</h1>
                     <h2 className="mb-8 text-white text-2xl">With Top 10 Travels</h2>
                     <Link to="/blog">
                         <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg">View Blog</button>
@@ -43,8 +43,8 @@ const Banner = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <img className="w-full h-fit" src="https://i.ibb.co/JR01rjR/banner3.png" alt="SliderImage"/>
-                <div className="slider-text text-left">
-                    <h1 className="text-white uppercase font-bold">Explore A Different Way <br /> To Travel</h1>
+                <div className="slider-text text-left absolute top-1/4 left-1/4">
+                    <h1 className="text-5xl mb-8 text-white uppercase font-bold leading-normal">Explore A Different Way <br /> To Travel</h1>
                     <h2 className="mb-8 text-white text-2xl">With Top 10 Travels</h2>
                     <Link to="/blog">
                         <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg">View Blog</button>
@@ -53,8 +53,8 @@ const Banner = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <img className="w-full h-fit" src="https://i.ibb.co/mRkZXHd/banner4.png" alt="SliderImage"/>
-                <div className="slider-text text-left">
-                    <h1 className="text-white uppercase font-bold">Start Your Journey! <br /> In All World</h1>
+                <div className="slider-text text-left absolute top-1/4 left-1/4">
+                    <h1 className="text-5xl mb-8 text-white uppercase font-bold leading-normal">Start Your Journey! <br /> In All World</h1>
                     <h2 className="mb-8 text-white text-2xl">With Top 10 Travels</h2>
                     <Link to="/blog">
                         <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg">View Blog</button>
