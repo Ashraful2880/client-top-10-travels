@@ -31,7 +31,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/signin" element={<Signin />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/dashboard" element={<Dashboard/>} />
+              <Route path="/dashboard/*" element={<Dashboard/>} />
               <Route path="details/:blogID" element={<PrivateRoute><Details/></PrivateRoute>} />            
             </Routes>
           <Footer />

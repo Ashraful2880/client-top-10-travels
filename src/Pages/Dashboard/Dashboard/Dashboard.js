@@ -1,8 +1,11 @@
 import React from 'react';
 import {Route,Link, Routes} from "react-router-dom";
 import useAuth from '../../../Hooks/UseAuth';
+import AddBlogs from '../AddBlogs/AddBlogs';
 
 import DashboardHome from '../DashboardHome/DashboardHome';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import ManageBlogs from '../ManageBlogs/ManageBlogs';
 
 const Dashboard = () => {
    
@@ -29,10 +32,16 @@ const Dashboard = () => {
                                 <img className="w-12 h-12 mb-4 rounded-full mx-auto" src={user?.photoURL} alt="User" />
                             :""}
                             <div className="bg-gray-900 text-white p-2 rounded mt-2 cursor-pointer hover:bg-gray-700 hover:text-blue-300">
-                                <Link to="/"> Dashboard </Link>
+                                <Link to="/dashboard"> Dashboard </Link>
                             </div>
                             <div className="bg-gray-900 text-white p-2 rounded mt-2 cursor-pointer hover:bg-gray-700 hover:text-blue-300">
-                                <Link to="dashboard"> Make Admin </Link>
+                                <Link to="manageBlog"> Manage Blogs</Link>
+                            </div>
+                            <div className="bg-gray-900 text-white p-2 rounded mt-2 cursor-pointer hover:bg-gray-700 hover:text-blue-300">
+                                <Link to="addblog"> Add Blog</Link>
+                            </div>
+                            <div className="bg-gray-900 text-white p-2 rounded mt-2 cursor-pointer hover:bg-gray-700 hover:text-blue-300">
+                                <Link to="makeAdmin"> Make Admin</Link>
                             </div>
                         </div>
 
@@ -47,7 +56,9 @@ const Dashboard = () => {
                 <section className="w-full p-4">
                     <Routes>
                         <Route path="/" element={<DashboardHome />}/>
-                        
+                        <Route path="manageBlog" element={<ManageBlogs />}/>
+                        <Route path="addblog" element={<AddBlogs />}/>
+                        <Route path="makeAdmin" element={<MakeAdmin />}/>
                     </Routes>
                 </section>  
             </main>
