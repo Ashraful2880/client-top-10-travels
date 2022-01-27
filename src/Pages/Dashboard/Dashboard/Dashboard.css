@@ -1,0 +1,46 @@
+/* .dashborad-home{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.884),rgba(0, 0, 0, 0.692)),url(../../../);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+} */
+.leftCard {
+    background: linear-gradient(#000428, #004683);
+} 
+.subMenu {
+    height: 40px;
+    position: relative;
+}
+
+.subMenu i {
+    position: absolute;
+    left: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    top: 10px;
+}
+.subMenu span {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    top: 10px;
+    letter-spacing: 1px;
+}
+.subMenu:hover {
+    background-color: #d42d2d;
+}
+.toggle-container {
+    position: fixed;
+    z-index: 2;
+    background: transparent;
+    margin-top: 3px;
+}
+
+@media only screen and (min-width: 992px) {
+.toggle-button {
+    display: none;
+}
+  }
