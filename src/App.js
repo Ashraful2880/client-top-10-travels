@@ -12,6 +12,8 @@ import Contact from './Pages/Contact/Contact';
 import Signin from './Pages/Signin/Signin';
 import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
+import Blogs from './Pages/Blogs/Blogs';
+import Service from './Pages/Service/Service';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blogs />} />
+            <Route path="/service" element={<Service />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/register" element={<Register />} />
