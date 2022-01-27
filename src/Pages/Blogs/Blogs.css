@@ -1,0 +1,27 @@
+.paginationBttns {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+li {
+    margin: 0 4px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+}
+li:hover {
+    background: blue;
+    color: #fff;
+    cursor: pointer;
+}
+.paginationDisabled {
+    color: grey;
+    cursor: default;
+    background: none;
+}
+.paginationActive{
+    background-color: blue;
+    color: #fff;
+}
