@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../Images/Main-Logo.png';
-import logo2 from '../../Images/logo-2.png';
 
 const Register = () => {
     return (
         <div className="bg-gradient-to-r from-blue-600 to-cyan-400">
             <div className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center">
                 <div className=" md:hidden sm:mb-8 mb-6">
-                   <img src={logo} alt="logo"/>
+                   <img src="https://i.ibb.co/wMtdpzN/Main-Logo.png" alt="logo"/>
                 </div>
                 <div className="bg-white shadow-lg rounded xl:w-1/3 lg:w-5/12 md:w-1/2 w-full lg:px-10 sm:px-6 sm:py-10 px-2 py-6">
                     <p className="focus:outline-none text-2xl font-extrabold leading-6 text-gray-800">Register Your Account</p>
-                    <img className="w-16 mx-auto mt-5" src={logo2} alt="logo"/>
+                    <img className="w-16 mx-auto mt-5" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="logo"/>
                     <button className="focus:outline-none focus:ring-2 focus:ring-indigo-700 p-3 border rounded-lg border-gray-400 flex items-center w-full mt-6 hover:bg-gray-100">
                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg2.svg" alt="google"/>
                         <p className="text-base font-medium ml-4 text-gray-700">
@@ -68,8 +66,8 @@ const Register = () => {
                 </div>
                 <div className="xl:w-1/3 md:w-1/2 lg:ml-16 ml-8 md:mt-0 mt-6">
                     <div className="pl-8 md:block hidden">
-                        <img className="w-16" src={logo2} alt="logo"/>
-                        <img src={logo} alt="logo"/> 
+                        <img className="w-16" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="logo"/>
+                        <img src="https://i.ibb.co/wMtdpzN/Main-Logo.png" alt="logo"/> 
                     </div>
                     <div className="flex items-start mt-8">
                         <div>

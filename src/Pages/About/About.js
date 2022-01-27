@@ -1,6 +1,4 @@
 import React from 'react';
-import aboutImage from '../../Images/about us.png';
-import mdAboutImage from '../../Images/md-about us.png';
 
 const About = () => {
     return (
@@ -14,9 +12,9 @@ const About = () => {
                     <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire,</p>
                 </div>
                 <div className="w-full lg:w-6/12">
-                    <img className="lg:block hidden w-full" src={aboutImage} alt="people discussing on board" />
-                    <img className="lg:hidden sm:block hidden w-full" src={mdAboutImage} alt="people discussing on board" />
-                    <img className="sm:hidden block w-full" src={mdAboutImage} alt="people discussing on board" />
+                    <img className="lg:block hidden w-full" src="https://i.ibb.co/d2SN01L/about-us.png" alt="people discussing on board" />
+                    <img className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/S608ZN2/md-about-us.png" alt="people discussing on board" />
+                    <img className="sm:hidden block w-full" src="https://i.ibb.co/S608ZN2/md-about-us.png" alt="people discussing on board" />
                 </div>
             </div>
             <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4 mt-12">

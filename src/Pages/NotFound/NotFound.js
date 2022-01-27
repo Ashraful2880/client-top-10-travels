@@ -1,16 +1,13 @@
 import React from 'react';
-import lgNotFound from '../../Images/lgNotFound.png';
-import mdNotFound from '../../Images/mdNotFound.png';
-import smNotFound from '../../Images/404-image.png';
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {
     return (
         <div className="flex items-center flex-col justify-center lg:flex-row py-28 px-6 md:px-24 md:py-20 lg:py-32 gap-16 lg:gap-28">
             <div className="w-full lg:w-1/2">
-                <img className="hidden lg:block" src={lgNotFound} alt="404Image"/>
-                <img className="hidden md:block lg:hidden" src={mdNotFound} alt="404Image"/>
-                <img className="md:hidden" src={smNotFound} alt="404Image"/>
+                <img className="hidden lg:block" src="https://i.ibb.co/DpgPTFr/lg-Not-Found.png" alt="404Image"/>
+                <img className="hidden md:block lg:hidden" src="https://i.ibb.co/ryRHvqy/md-Not-Found.png" alt="404Image"/>
+            <img className="md:hidden" src="https://i.ibb.co/rfFYDHz/404-image.png" alt="404Image"/>
             </div>
             <div className="w-full lg:w-1/2 text-left">
                 <h1 className="py-4 text-3xl lg:text-4xl font-extrabold text-gray-800">Looks like you've found the doorway to the great nothing</h1>

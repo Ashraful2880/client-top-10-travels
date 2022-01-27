@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../Images/logo-2.png'
 
 const Footer = () => {
     return (  
@@ -9,7 +8,7 @@ const Footer = () => {
                 <div className="mx-6 py-10 text-center md:text-left">
                     <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div>
-                            <img className="w-14 mb-4" src={logo} alt="footer logo" />
+                            <img className="w-14 mb-4" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="footer logo" />
                             <h6 className=" uppercase font-semibold mb-4 flex items-center justify-center md:justify-start"> Top 10 Travels </h6>
                             <p className="w-80 mx-auto"> Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>

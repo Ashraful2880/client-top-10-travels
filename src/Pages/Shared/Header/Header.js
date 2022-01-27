@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../Images/logo-2.png';
 
 const Header = () => {
     return (
@@ -15,10 +14,10 @@ const Header = () => {
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/home">
-                            <img className="block lg:hidden h-8 w-auto" src={logo} alt="Workflow"/>
+                            <img className="block lg:hidden h-8 w-auto" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="Workflow"/>
                         </Link>
                         <Link to="/home">
-                            <img className="hidden lg:block h-8 w-auto" src={logo} alt="Workflow"/>
+                            <img className="hidden lg:block h-8 w-auto" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="Workflow"/>
                         </Link>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
