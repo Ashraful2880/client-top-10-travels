@@ -28,15 +28,15 @@ const Header = () => {
                             </Link>
                             <Link 
                                 className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium" 
-                                to="/about">About
-                            </Link>
-                            <Link 
-                                className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium" 
                                 to="/blog">Blog
                             </Link>
                             <Link
                                 className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium"
                                 to="/service">Service
+                            </Link>
+                            <Link 
+                                className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium" 
+                                to="/about">About
                             </Link>
                             <Link
                                 className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium"

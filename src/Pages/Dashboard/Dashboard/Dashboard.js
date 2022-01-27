@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route,Link, Routes} from "react-router-dom";
-import './Dashboard.css';
 import useAuth from '../../../Hooks/UseAuth';
 
 import DashboardHome from '../DashboardHome/DashboardHome';
