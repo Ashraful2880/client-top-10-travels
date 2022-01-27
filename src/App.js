@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, PrivateRoute} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
@@ -12,6 +12,8 @@ import Blogs from './Pages/Blogs/Blogs';
 import Service from './Pages/Service/Service';
 import AuthProvider from './Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Details from './Pages/Details/Details';
 
 function App() {
   return (
@@ -23,14 +25,14 @@ function App() {
               <Route path="/*" element={<NotFound />} />
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blogs />} />
+              <Route path="/about" element={<About />} />
               <Route path="/service" element={<Service />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/signin" element={<Signin />} />
               <Route path="/register" element={<Register />} />
               <Route path="/dashboard" element={<Dashboard/>} />
-              {/* <Route path="/blog" element={<PrivateRoute><Blogs></Blogs></PrivateRoute>} />             */}
+              <Route path="details/:blogID" element={<PrivateRoute><Details/></PrivateRoute>} />            
             </Routes>
           <Footer />
         </BrowserRouter>

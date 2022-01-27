@@ -11,7 +11,7 @@ const Blogs = () => {
 
     const [blogs,setBlogs]=useState([]);
     useEffect(()=>{
-        fetch('./blogs.json')
+        fetch('http://localhost:5000/blog')
         .then(res=>res.json())
         .then(data=>setBlogs(data))
     },[])
@@ -48,7 +48,7 @@ const Blogs = () => {
                             <Rating className="mb-2 text-yellow-500" readonly emptySymbol="far fa-star" fullSymbol="fas fa-star" initialRating={blog.rating}>
                             </Rating>
                             <p className="text-sm text-gray-600 leading-6 font-normal">{blog.description}</p>
-                            <Link to="/about">
+                            <Link to={`/details/${blog._id}`}>
                                 <button className="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg mt-4">Explore</button>
                             </Link>
                         </div>
