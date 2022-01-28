@@ -69,9 +69,9 @@ const useFirebase=()=>{
             const user = userCredential.user;
             const newUser=({...user,displayName:name});
             setUser(newUser);
+            emailverify();
             updateName();
             saveUser();
-            emailverify();
           })
           .catch((error) => {
             setError(error.message)
