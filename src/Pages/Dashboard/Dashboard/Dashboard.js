@@ -18,8 +18,8 @@ const Dashboard = () => {
         .then(data=>setAdmin(data.admin))
     },[user.email]);
 
-   const myFunction=()=>{
-       const toggleButton=document.getElementById("toogleDiv");
+   const toogleMenu=()=>{
+       const toggleButton=document.getElementById("toogleDashboard");
        if (toggleButton.style.display === "none") {
         toggleButton.style.display = "block";
       } else {
@@ -29,8 +29,14 @@ const Dashboard = () => {
 
     return (
         <>
+            <button 
+                onClick={toogleMenu}
+                type="button" 
+                className="block p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <i className="fas fa-bars text-2xl px-2"></i>
+            </button>
             <main className="flex w-full h-screen">
-                <aside className="w-80 h-screen bg-gray shadow-md w-fulll hidden sm:block">
+                <aside className="w-80 h-screen bg-gray shadow-md" id="toogleDashboard">
                     <div className="flex flex-col justify-between h-screen p-4 bg-gray-800">
                         <div className="text-sm">
                             {user?.email?

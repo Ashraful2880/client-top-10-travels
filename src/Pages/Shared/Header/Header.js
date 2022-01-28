@@ -5,12 +5,24 @@ import useAuth from '../../../Hooks/UseAuth';
 const Header = () => {
     const {user,handleSignOut} =useAuth();
 
+    const myFunction=()=>{
+        const toggleButton=document.getElementById("toogleDiv");
+        if (toggleButton.style.display === "none") {
+         toggleButton.style.display = "block";
+       } else {
+         toggleButton.style.display = "none";
+       }
+    }
+
     return (
         <nav className="bg-gray-800 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <button 
+                            onClick={myFunction}
+                            type="button" 
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                             <i className="fas fa-bars text-2xl px-2"></i>
                         </button>
                     </div>
@@ -65,7 +77,7 @@ const Header = () => {
                     }
                 </div>
             </div>
-            <div className="sm:hidden mobile-menu">
+            <div className="hidden" id="toogleDiv">
                 <div className="px-2 pt-2 pb-3 space-y-1">
                     <Link 
                         to="/"
