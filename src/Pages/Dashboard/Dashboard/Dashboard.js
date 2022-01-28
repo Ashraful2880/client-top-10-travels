@@ -32,7 +32,7 @@ const Dashboard = () => {
             <button 
                 onClick={toogleMenu}
                 type="button" 
-                className="block p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                className="fixed left-3 p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                 <i className="fas fa-bars text-2xl px-2"></i>
             </button>
             <main className="flex w-full h-screen">
