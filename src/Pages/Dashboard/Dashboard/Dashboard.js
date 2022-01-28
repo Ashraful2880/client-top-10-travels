@@ -13,7 +13,7 @@ const Dashboard = () => {
     const[admin,setAdmin]=useState(false);
 //<----------------- Load Admin Data From Database --------------->
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${user?.email}`)
+        fetch(`https://young-meadow-11819.herokuapp.com/user/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setAdmin(data.admin))
     },[user.email]);

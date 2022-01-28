@@ -28,7 +28,7 @@ const AddBlogs = () => {
         formData.append("by",travellarName);
         formData.append("date",date);
         
-        fetch('http://localhost:5000/postBlog', {
+        fetch('https://young-meadow-11819.herokuapp.com/postBlog', {
             method: 'POST',
             body: formData
         })

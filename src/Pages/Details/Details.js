@@ -2,21 +2,17 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import Rating from 'react-rating';
 import { useParams } from 'react-router-dom';
-import useAuth from '../../Hooks/UseAuth';
-import Blogs from '../Blogs/Blogs';
 
 const Details = () => {
     const {blogID}=useParams();
-    const {user}=useAuth();
     const [details,setDetails]=useState({});
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/details/${blogID}`)
+        fetch(`https://young-meadow-11819.herokuapp.com/details/${blogID}`)
         .then(res=>res.json())
         .then(data=>setDetails(data))
     },[]);
 
-    console.log(details);
     return (
         <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
             <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">

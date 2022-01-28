@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const handleMakeAdmin=event=>{
         event.preventDefault();
         const admin={email:adminEmail}
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://young-meadow-11819.herokuapp.com/users/admin',{
             method:"PUT",
             headers:{'content-type':'application/json'},
             body:JSON.stringify(admin)

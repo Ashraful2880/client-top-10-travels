@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const TopPlace = () => {
     const [places, setPlaces]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/topPlace')
+        fetch('https://young-meadow-11819.herokuapp.com/topPlace')
         .then(res=>res.json())
         .then(data=>setPlaces(data))
     },[])
