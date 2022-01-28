@@ -14,6 +14,7 @@ import AuthProvider from './Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Details from './Pages/Details/Details';
+import TopPlace from './Pages/Top Place/TopPlace';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/blog" element={<Blogs />} />
+              <Route path="/topPlace" element={<TopPlace />} />
               <Route path="/about" element={<About />} />
               <Route path="/service" element={<Service />} />
               <Route path="/contact" element={<Contact />} />

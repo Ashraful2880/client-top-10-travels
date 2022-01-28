@@ -42,6 +42,10 @@ const Header = () => {
                                 className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium" 
                                 to="/blog">Blog
                             </Link>
+                            <Link 
+                                className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium" 
+                                to="/topPlace">Top Place
+                            </Link>
                             <Link
                                 className="text-gray-200 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium"
                                 to="/service">Service
@@ -90,6 +94,10 @@ const Header = () => {
                     <Link 
                         to="/blog"
                         className="text-gray-200 hover:bg-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog
+                    </Link>
+                    <Link 
+                        to="/topPlace"
+                        className="text-gray-200 hover:bg-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Top Place
                     </Link>
                     <Link 
                         to="/service"
