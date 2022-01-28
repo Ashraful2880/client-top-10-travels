@@ -29,10 +29,10 @@ const MakeAdmin = () => {
                 <h1 className="text-white mb-6 text-2xl font-bold">You Can make Admin By Registered Email</h1>
                 <input
                     onBlur={handleAdminEmail} 
-                    class="text-gray-600 focus:ring-2 focus:ring-indigo-700 dark:text-gray-400 focus:outline-none dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal py-2 px-12 text-sm mr-3 border-gray-300 rounded border shadow " 
+                    className="text-gray-600 focus:ring-2 focus:ring-indigo-700 dark:text-gray-400 focus:outline-none dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal py-2 px-12 text-sm mr-3 border-gray-300 rounded border shadow " 
                     placeholder="Enter New Admin Email" />
                 <input 
-                    class="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg ml-3" 
+                    className="bg-indigo-700 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg ml-3" 
                     type="submit"
                     value="Confirm" />
             </form>
