@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import swal from 'sweetalert';
 import './AddBlog.css';
 
 const AddBlogs = () => {
@@ -34,7 +35,7 @@ const AddBlogs = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert("Rating Added")
+                swal("Good job!", "Blog Posted", "Go to Blog Page To see The Blog");
             }
         })
         .catch(error => {
@@ -78,7 +79,8 @@ const AddBlogs = () => {
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">User Rating (Out Of 5)</label>
                             <input 
-                                type="number" 
+                                type="number"
+                                maxLength="5" 
                                 onChange={e=>setRating(e.target.value)}
                                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                                 placeholder="4"/>

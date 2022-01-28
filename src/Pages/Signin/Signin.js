@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/UseAuth';
 
 const Signin = () => {
-    const {handleSignIn,handleEmail,handlePassword,} =useAuth();
+    const {handleSignIn,handleEmail,handlePassword,user,error,setError} =useAuth();
+
     return (
         <div className="bg-gradient-to-r from-blue-600 to-cyan-400">
             <div className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center">
@@ -15,6 +16,7 @@ const Signin = () => {
                     <p className="focus:outline-none text-xl font-extrabold leading-6 text-gray-700 mb-6">Login To Your Account</p>
                     <img className="w-16 mx-auto mb-6" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="logo"/> 
                     <form onSubmit={handleSignIn}>
+                        {user.email?setError(''): <span className="text-red-600">{error}</span> }
                         <div>
                             <label 
                                 htmlFor="email" 

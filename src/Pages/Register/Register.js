@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/UseAuth';
 
 const Register = () => {
-const {googleSignIn,handleEmail,handleName,handlePassword,handleRegister} =useAuth();
+const {googleSignIn,handleEmail,handleName,handlePassword,handleRegister,user,error,setError} =useAuth();
 
     return (
         <div className="bg-gradient-to-r from-blue-600 to-cyan-400">
@@ -34,6 +34,7 @@ const {googleSignIn,handleEmail,handleName,handlePassword,handleRegister} =useAu
                         <hr className="w-full bg-gray-400" />
                     </div>
                     <form onSubmit={handleRegister}>
+                        {user.email?setError(''): <span className="text-red-600">{error}</span> }
                         <div>
                             <label 
                                 htmlFor="name" 
