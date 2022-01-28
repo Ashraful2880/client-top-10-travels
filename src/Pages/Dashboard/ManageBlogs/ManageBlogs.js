@@ -14,6 +14,23 @@ const ManageBlogs = () => {
             setPageNumber(selected)
         };
 
+        const handleDelete=(id)=>{
+            const proceed=window.confirm("Are You Sure ? Want To Delete ?");
+            if (proceed){
+                const url=`http://localhost:5000/deleteBlog/${id}`;
+                fetch(url,{
+                    method:'DELETE'
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    if(data.deletedCount>0){
+                        window.alert('Deleted Successfully')
+                    }
+                    window.location.reload(false);
+            });
+            }
+        };
+
     return (
         <div>
             <table className="min-w-full border-collapse block md:table mb-4">
@@ -52,7 +69,8 @@ const ManageBlogs = () => {
                                         Update
                                 </button>
                                 <button 
-                                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded ml-1">
+                                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded ml-1"
+                                    onClick={()=>handleDelete (blog?._id)}>
                                         Delete
                                 </button>
                             </td>
