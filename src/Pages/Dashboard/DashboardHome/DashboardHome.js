@@ -8,7 +8,7 @@ const DashboardHome = () => {
         <div className="lg:px-6 2xl:px-0">
             <div className="mx-auto container relative z-0 px-4 xl:px-0">
                 <div className="flex flex-col-reverse md:flex-row">
-                    <div className="md:w-3/5 md:pt-24 pb-10 lg:py-32 xl:py-48">
+                    <div className="md:w-3/5 md:pt-24 pb-10 lg:py-32 xl:py-20">
                         {user?
                             <h1 className="text-3xl lg:text-3xl xl:text-5xl font-black text-gray-900 text-center md:text-left tracking-tighter f-f-i md:w-7/12 leading-tight text-heading-color mb-6">Hi {user?.displayName}</h1>:''
                         }
