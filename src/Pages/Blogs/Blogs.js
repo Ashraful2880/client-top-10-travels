@@ -2,19 +2,15 @@ import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import UseBlogs from '../../Hooks/UseBlogs';
 import './Blogs.css';
 
 const Blogs = () => {
     const [pageNumber,setPageNumber]=useState(0);
     const blogPerPage=9;
     const pagesVisited=pageNumber*blogPerPage;
+    const [blogs]=UseBlogs();
 
-    const [blogs,setBlogs]=useState([]);
-    useEffect(()=>{
-        fetch('http://localhost:5000/blog')
-        .then(res=>res.json())
-        .then(data=>setBlogs(data))
-    },[])
     const pageCount=Math.ceil(blogs.length/blogPerPage);
         const changePage=({selected})=>{
             setPageNumber(selected)
