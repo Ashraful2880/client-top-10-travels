@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/UseAuth';
 
 const Signin = () => {
+    const {handleSignIn,handleEmail,handlePassword,} =useAuth();
     return (
         <div className="bg-gradient-to-r from-blue-600 to-cyan-400">
             <div className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center">
@@ -12,7 +14,7 @@ const Signin = () => {
                     <p className="focus:outline-none text-2xl font-extrabold leading-6 text-gray-800 mb-4">Welcome back !!!</p>
                     <p className="focus:outline-none text-xl font-extrabold leading-6 text-gray-700 mb-6">Login To Your Account</p>
                     <img className="w-16 mx-auto mb-6" src="https://i.ibb.co/DQkTLN3/logo-2.png" alt="logo"/> 
-                    <form>
+                    <form onSubmit={handleSignIn}>
                         <div>
                             <label 
                                 htmlFor="email" 
@@ -22,7 +24,8 @@ const Signin = () => {
                             <input 
                                 type="email" 
                                 className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-500 text-gray-800 py-3 w-full pl-3 mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" 
-                                placeholder="example@gmail.com " />
+                                placeholder="example@gmail.com "
+                                onBlur={handleEmail} />
                         </div>
                         <div className="mt-6 w-full">
                             <label htmlFor="myInput" className="text-sm font-medium leading-none text-gray-800"> Password </label>
@@ -31,6 +34,7 @@ const Signin = () => {
                                     type="password" 
                                     className="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400" 
                                     placeholder="Your Password"
+                                    onBlur={handlePassword}
                                 />
                             </div>
                         </div>

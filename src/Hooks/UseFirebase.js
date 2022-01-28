@@ -1,4 +1,4 @@
-import { getAuth,updateProfile,signOut ,GoogleAuthProvider, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signInWithPopup } from "firebase/auth";
+import { getAuth,updateProfile,signOut ,GoogleAuthProvider, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signInWithPopup,GithubAuthProvider } from "firebase/auth";
 import { useEffect, useState } from "react";
 import iniAuthentication from "../Firebase/Firebase.init";
 
@@ -23,31 +23,54 @@ const useFirebase=()=>{
       signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
+        const googleUser={displayName:user.displayName,email:user.email}
         setUser(user);
+        updateUser(googleUser);
       }).catch((error) => {
         setError(error.message)
       }).finally(()=>setIsLoading(false));
     }
-        // Create New User With Email & Password
+    // Sign in With Github
+
+    const gitHubSignIn=()=>{
+      setIsLoading(true);
+      const gitHubProvider = new GithubAuthProvider();
+      signInWithPopup(auth, gitHubProvider)
+      .then((result) => {
+      const user = result.user;
+      setUser(user)
+      console.log(result.user);
+  }).catch((error) => {
+    setError(error.message)
+    console.error(error.message);
+  }).finally(()=>setIsLoading(false));
+    }
+    // Create User With Email & Password
 
     const handleName=(event)=>{
-      setName(event.target.value)
+      const name=(event.target.value);
+      setName(name)
     }
     const handleEmail=(event)=>{
-        setEmail(event.target.value)
+        const email=(event.target.value);
+        setEmail(email)
     }
     const handlePassword=(event)=>{
         setPassword(event.target.value)        
     }
+    
+    //<-------------- RegisterUser --------------->
+    
     const handleRegister=(event)=>{
         event.preventDefault();
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            setUser({...user,displayName:name});
-            setName("");
+            const newUser=({...user,displayName:name});
+            setUser(newUser)
             updateName();
+            saveUser()
           })
           .catch((error) => {
             setError(error.message)
@@ -63,6 +86,7 @@ const useFirebase=()=>{
             setError(error.message)
           });
         }
+
     // Handle Sign in Existing User
 
     const handleSignIn=(event)=>{
@@ -77,10 +101,10 @@ const useFirebase=()=>{
     setError(error.message)
   }).finally(()=>setIsLoading(false));
     }
+    
     // Handle Sign Out
 
     const handleSignOut=()=>{
-      setIsLoading(true);
       const auth = getAuth();
       setIsLoading(true);
       signOut(auth).then(() => {
@@ -100,9 +124,37 @@ const useFirebase=()=>{
           setIsLoading(false);
       });
       return ()=>unsubscribed;
-  },[])
+  },[]);
 
-return{handleEmail,handleName,handlePassword,handleRegister,error,user,handleSignIn,handleSignOut,googleSignIn,setError,isloading,setIsLoading}
+  //<----------- Save User Info To Database ---------->
+
+  const saveUser=()=>{
+    const dbUser={displayName:name,email:email}
+    fetch('http://localhost:5000/users',{
+      method:"POST",
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify(dbUser)
+  })
+  .then(res=>res.json())
+  .then(result=>{;
+  })
+  }
+
+  //<----------- Update User Info To Database ---------->
+
+  const updateUser=(googleUser)=>{
+    // const dbUser={displayName:name,email:email}
+    fetch('http://localhost:5000/users',{
+      method:"PUT",
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify(googleUser)
+  })
+  .then(res=>res.json())
+  .then(result=>{;
+  })
+  }
+
+return{handleEmail,handleName,handlePassword,handleRegister,error,user,handleSignIn,handleSignOut,googleSignIn,gitHubSignIn,setError,isloading}
 }
 
 export default useFirebase;

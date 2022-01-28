@@ -44,7 +44,10 @@ const Blogs = () => {
                             </div>
                         </div>
                         <div className="text-left px-2">
-                            <p className="text-gray-600 pb-1 text-lg">{blog.name}</p>
+                            <p className="text-gray-600 text-lg">{blog.name} 
+                                <span className="text-red-600 font-bold"> ({blog.cost})</span>
+                            </p>
+                            <p className="text-gray-600 pb-1 italic">{blog.date}</p>
                             <Rating className="mb-2 text-yellow-500" readonly emptySymbol="far fa-star" fullSymbol="fas fa-star" initialRating={blog.rating}>
                             </Rating>
                             <p className="text-sm text-gray-600 leading-6 font-normal">{blog.description}</p>

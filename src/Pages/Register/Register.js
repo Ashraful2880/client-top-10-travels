@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/UseAuth';
 
 const Register = () => {
-const {googleSignIn} =useAuth();
+const {googleSignIn,handleEmail,handleName,handlePassword,handleRegister} =useAuth();
+
     return (
         <div className="bg-gradient-to-r from-blue-600 to-cyan-400">
             <div className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center">
@@ -32,7 +33,19 @@ const {googleSignIn} =useAuth();
                         <p className="text-base font-medium leading-4 px-2.5 text-gray-500">OR</p>
                         <hr className="w-full bg-gray-400" />
                     </div>
-                    <form>
+                    <form onSubmit={handleRegister}>
+                        <div>
+                            <label 
+                                htmlFor="name" 
+                                className="text-sm font-medium leading-none text-gray-800"> 
+                                    Name 
+                            </label>
+                            <input 
+                                type="name" 
+                                className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-500 text-gray-800 py-3 w-full pl-3 mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                                onBlur={handleName}
+                                placeholder="example@gmail.com " />
+                        </div>
                         <div>
                             <label 
                                 htmlFor="email" 
@@ -42,6 +55,7 @@ const {googleSignIn} =useAuth();
                             <input 
                                 type="email" 
                                 className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-500 text-gray-800 py-3 w-full pl-3 mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                                onBlur={handleEmail}
                                 placeholder="example@gmail.com " />
                         </div>
                         <div className="mt-6 w-full">
@@ -49,7 +63,8 @@ const {googleSignIn} =useAuth();
                             <div className="relative flex items-center justify-center">
                                 <input
                                     type="password" 
-                                    className="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400" 
+                                    className="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                                    onBlur={handlePassword} 
                                     placeholder="Your Password"
                                 />
                             </div>

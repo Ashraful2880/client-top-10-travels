@@ -52,7 +52,7 @@ const Header = () => {
                             to="/dashboard">Dashboard
                         </Link> 
                         <Link to="/home">
-                            <img className="h-8 w-8 rounded-full ring-2 ring-offset-2 ml-2" src={user?.photoURL} alt="Profile-Pic"/>
+                            <img className="h-8 w-8 rounded-full ring-2 ring-offset-2 ml-2" src={user?.photoURL} alt="Profile"/>
                         </Link>                        
                         <Link to="/home" onClick={handleSignOut}>
                             <i className="fas fa-sign-out-alt text-white ml-4 text-lg px-2 border border-gray-800 rounded-lg hover:border-yellow-500"></i>

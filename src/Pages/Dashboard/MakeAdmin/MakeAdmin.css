@@ -1,0 +1,8 @@
+.admin-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.507)), url('https://i.ibb.co/NtMj6wP/banner1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 40px;
+}
