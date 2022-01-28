@@ -1,4 +1,4 @@
-import { getAuth,updateProfile,signOut ,GoogleAuthProvider, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signInWithPopup,GithubAuthProvider } from "firebase/auth";
+import { getAuth,updateProfile,signOut ,GoogleAuthProvider, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signInWithPopup,GithubAuthProvider, sendEmailVerification } from "firebase/auth";
 import { useEffect, useState } from "react";
 import iniAuthentication from "../Firebase/Firebase.init";
 
@@ -68,9 +68,10 @@ const useFirebase=()=>{
         .then((userCredential) => {
             const user = userCredential.user;
             const newUser=({...user,displayName:name});
-            setUser(newUser)
+            setUser(newUser);
             updateName();
-            saveUser()
+            saveUser();
+            emailverify();
           })
           .catch((error) => {
             setError(error.message)
@@ -113,6 +114,16 @@ const useFirebase=()=>{
       setError(error.message)
     }).finally(()=>setIsLoading(false));
     }
+
+    // Verify User Email
+
+    const emailverify = () =>{
+      sendEmailVerification(auth.currentUser)
+      .then(() => {
+       
+      });
+    
+    }
      // observe whether user auth state changed or not
      useEffect(()=>{
       const unsubscribed= onAuthStateChanged(auth,(user)=>{
@@ -143,7 +154,6 @@ const useFirebase=()=>{
   //<----------- Update User Info To Database ---------->
 
   const updateUser=(googleUser)=>{
-    // const dbUser={displayName:name,email:email}
     fetch('https://young-meadow-11819.herokuapp.com/users',{
       method:"PUT",
       headers:{'content-type':'application/json'},
