@@ -5,7 +5,7 @@ const UseBlogs = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('https://young-meadow-11819.herokuapp.com/blog')
+        fetch(`${process.env.REACT_APP_API_PATH}/blog`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
