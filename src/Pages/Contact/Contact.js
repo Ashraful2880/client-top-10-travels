@@ -2,8 +2,8 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div className="container mx-auto py-4">
-            <div className="lg:flex">
+        <div className="container mx-auto py-4 min-h-screen flex justify-center items-center">
+            <div className="flex">
                 <div className="xl:w-2/5 lg:w-2/5 bg-indigo-700 py-16 xl:rounded-bl rounded-tl rounded-tr xl:rounded-tr-none">
                     <div className="xl:w-5/6 xl:px-0 px-8 mx-auto">
                         <h1 className="xl:text-4xl text-3xl pb-4 text-white font-bold">Get in touch</h1>
@@ -29,61 +29,61 @@ const Contact = () => {
                         <div className="block xl:flex w-full flex-wrap justify-between mb-6">
                             <div className="w-2/4 max-w-xs mb-6 xl:mb-0">
                                 <div className="flex flex-col">
-                                    <label 
-                                        htmlFor="full_name" 
+                                    <label
+                                        htmlFor="full_name"
                                         className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Full Name
                                     </label>
-                                    <input required 
-                                        name="full_name" 
-                                        type="text" 
-                                        className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Full Name"/>
+                                    <input required
+                                        name="full_name"
+                                        type="text"
+                                        className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Full Name" />
                                 </div>
                             </div>
                             <div className="w-2/4 max-w-xs xl:flex xl:justify-end">
                                 <div className="flex flex-col">
-                                    <label 
-                                        htmlFor="email" 
+                                    <label
+                                        htmlFor="email"
                                         className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Email
                                     </label>
-                                    <input required 
-                                        name="email" 
-                                        type="email" 
-                                        className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="example@email.com"/>
+                                    <input required
+                                        name="email"
+                                        type="email"
+                                        className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="example@email.com" />
                                 </div>
                             </div>
                         </div>
                         <div className="flex w-full flex-wrap">
                             <div className="w-2/4 max-w-xs">
                                 <div className="flex flex-col">
-                                    <label 
-                                        htmlFor="phone" 
+                                    <label
+                                        htmlFor="phone"
                                         className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2">
-                                            Phone
+                                        Phone
                                     </label>
                                     <input required
-                                        name="phone" 
-                                        type="tel" 
-                                        className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="+88 0123456789"/>
+                                        name="phone"
+                                        type="tel"
+                                        className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="+88 0123456789" />
                                 </div>
                             </div>
                         </div>
                         <div className="w-full mt-6">
                             <div className="flex flex-col">
-                                <label 
+                                <label
                                     className="text-sm font-semibold text-gray-800 mb-2" htmlFor="message">
-                                        Message
+                                    Message
                                 </label>
-                                <textarea 
-                                    placeholder="Your Message" 
-                                    name="message" 
-                                    className="border-gray-300 border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-indigo-700" 
+                                <textarea
+                                    placeholder="Your Message"
+                                    name="message"
+                                    className="border-gray-300 border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-indigo-700"
                                     rows="8">
                                 </textarea>
                             </div>
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 className="focus:outline-none bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-3 text-sm leading-6 focus:border-4 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">
                                 Submit
                             </button>
